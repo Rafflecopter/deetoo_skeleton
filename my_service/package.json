@@ -1,0 +1,19 @@
+{
+  "name": "deetoo_skeleton",
+  "version": "0.0.0",
+  "description": "Fork this to create a new deetoo worker",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rafflecopter/deetoo_skeleton.git"
+  },
+  "author": "Juan Patten",
+  "license": "BSD",
+
+  "dependencies": {
+    "deetoo": "git+http://github.com/Rafflecopter/deetoo.git"
+  }
+}
