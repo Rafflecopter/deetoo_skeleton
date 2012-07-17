@@ -3,9 +3,7 @@ var fs = require('fs')
 ,   is_dotcloud = fs.existsSync(envFile)
 
 ,   ENV = is_dotcloud
-        ? fs.existsSync('./config_dotcloud.js')
-            ? require('./config_dotcloud.js')
-            : {} 
+        ? require('./config_dotcloud.js')
         : fs.existsSync('./config_local.js')
             ? require('./config_local')
             : {}
