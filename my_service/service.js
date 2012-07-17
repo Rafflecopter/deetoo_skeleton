@@ -1,5 +1,5 @@
 
-var DeeToo = require('./lib/deetoo')
+var DeeToo = require('deetoo')
 ,   CONF = require('./config')
 
 ,   d2 = new DeeToo(CONF)
