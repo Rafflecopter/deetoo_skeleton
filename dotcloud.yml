@@ -1,0 +1,10 @@
+worker:
+    type: custom
+    buildscript: nodejs/builder
+    ports:
+        www: http
+    process: node lib/server.js
+    approot: deetoo_worker
+    node_version: v0.8.3
+redis:
+    type: redis
