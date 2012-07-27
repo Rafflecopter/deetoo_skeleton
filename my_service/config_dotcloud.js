@@ -5,11 +5,16 @@ var fs = require('fs')
 
 
 module.exports = {
-    REDIS: {
-         host:   rawENV.DOTCLOUD_REDIS_REDIS_HOST
-        ,port:  rawENV.DOTCLOUD_REDIS_REDIS_PORT
-        ,user:  rawENV.DOTCLOUD_REDIS_REDIS_USER
-        ,pass:  rawENV.DOTCLOUD_REDIS_REDIS_PASS
+     REDIS: {
+         host:      rawENV.DOTCLOUD_REDIS_REDIS_HOST
+        ,port:      rawENV.DOTCLOUD_REDIS_REDIS_PORT
+        ,user:      rawENV.DOTCLOUD_REDIS_REDIS_USER
+        ,pass:      rawENV.DOTCLOUD_REDIS_REDIS_PASS
+    }
+
+    ,AUTH: {
+         user:      rawENV.AUTH_USER
+        ,pass:      rawENV.AUTH_PASS
     }
 }
         

@@ -14,4 +14,5 @@ module.exports = {
 
     ,redis: ENV.REDIS || undefined
 
+    ,auth: ENV.AUTH
 }
