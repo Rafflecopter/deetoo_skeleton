@@ -3,7 +3,7 @@ worker:
     buildscript: nodejs/builder
     ports:
         www: http
-    process: node lib/server.js
+    process: node service.js
     approot: deetoo_worker
     node_version: v0.8.3
 redis:
