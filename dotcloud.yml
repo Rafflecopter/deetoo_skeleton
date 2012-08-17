@@ -4,7 +4,7 @@ worker:
     ports:
         www: http
     process: node service.js
-    approot: deetoo_worker
-    node_version: v0.8.3
+    approot: my_service--CHANGE_ME
+    node_version: v0.8.6
 redis:
     type: redis
