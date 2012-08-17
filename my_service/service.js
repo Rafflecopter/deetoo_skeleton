@@ -1,8 +1,5 @@
-
-var DeeToo = require('deetoo')
-,   CONF = require('./config')
-
-,   d2 = new DeeToo(CONF)
+var CONF = require('./config')
+,   d2 = require('deetoo').init(CONF)
 
 
 d2.can('hammer', function(job, $done) {
