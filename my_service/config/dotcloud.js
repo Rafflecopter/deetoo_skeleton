@@ -1,11 +1,12 @@
 var fs = require('fs')
-,   envFile = '/home/dotcloud/environment.json'
+,   envFile = '/tmp/dotcloud'
+,   is_dotcloud = fs.existsSync(envFile)
+,   rawENV = is_dotcloud && JSON.parse(fs.readFileSync(envFile))
 
-,   rawENV = JSON.parse(fs.readFileSync(envFile))
+module.exports = !is_dotcloud ? null : {
+    PORT_WWW: rawENV.PORT_WWW
 
-
-module.exports = {
-     REDIS: {
+    ,REDIS: {
          host:      rawENV.DOTCLOUD_REDIS_REDIS_HOST
         ,port:      rawENV.DOTCLOUD_REDIS_REDIS_PORT
         ,user:      rawENV.DOTCLOUD_REDIS_REDIS_USER
@@ -17,4 +18,4 @@ module.exports = {
         ,pass:      rawENV.AUTH_PASS
     }
 }
-        
+    

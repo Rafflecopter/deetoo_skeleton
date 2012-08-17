@@ -31,6 +31,6 @@ d2.can('hammer', function(job, $done) {
 
 d2.speaks('http')
 
-d2.start()
+d2.start(function(){})
 
 
