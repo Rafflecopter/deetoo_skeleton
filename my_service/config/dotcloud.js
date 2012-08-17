@@ -1,5 +1,5 @@
 var fs = require('fs')
-,   envFile = '/tmp/dotcloud'
+,   envFile = '/home/dotcloud/environment.json'
 ,   is_dotcloud = fs.existsSync(envFile)
 ,   rawENV = is_dotcloud && JSON.parse(fs.readFileSync(envFile))
 
